@@ -1,0 +1,9 @@
+model_type: "gpt"
+batch_size: 1
+seq_length: 1024
+d_model: 1024
+n_heads: 16
+dim_ff: 4096
+num_layers: 24
+vocab_size: 50257
+dropout: 0.1

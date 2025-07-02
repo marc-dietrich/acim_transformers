@@ -1,0 +1,9 @@
+model_type: "bart"
+batch_size: 1
+seq_length: 1024
+d_model: 1024
+n_heads: 16
+dim_ff: 4096
+num_layers: 12  # Note: For BART, encoder & decoder each have 12 layers
+vocab_size: 50265
+dropout: 0.1

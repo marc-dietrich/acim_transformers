@@ -1,0 +1,9 @@
+model_type: "bert"
+batch_size: 1
+seq_length: 512
+d_model: 1024
+n_heads: 16
+dim_ff: 4096
+num_layers: 24
+vocab_size: 30522
+dropout: 0.1
