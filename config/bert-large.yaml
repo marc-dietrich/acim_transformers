@@ -1,9 +1,18 @@
 model_type: "bert"
 batch_size: 1
-seq_length: 512
+seq_length: 1
 d_model: 1024
 n_heads: 16
 dim_ff: 4096
 num_layers: 24
 vocab_size: 30522
+type_vocab_size: 2
 dropout: 0.1
+
+# tmp task config
+num_labels: 2  # Number of labels for classification task
+
+# Pooler settings
+pooler:
+  hidden_size: 1024       # same as d_model
+  activation: "tanh"      # activation function used in pooler
