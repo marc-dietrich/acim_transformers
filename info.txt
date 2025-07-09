@@ -1,0 +1,456 @@
+Monarch conversion took 104.67 seconds
+=====================================================================================
+Layer (type:depth-idx)                                       Param #
+=====================================================================================
+BertForSequenceClassification                                --
+├─BertModel: 1-1                                             --
+│    └─BertEmbeddings: 2-1                                   --
+│    │    └─Embedding: 3-1                                   31,254,528
+│    │    └─Embedding: 3-2                                   524,288
+│    │    └─Embedding: 3-3                                   2,048
+│    │    └─LayerNorm: 3-4                                   2,048
+│    │    └─Dropout: 3-5                                     --
+│    └─BertEncoder: 2-2                                      --
+│    │    └─ModuleList: 3-6                                  --
+│    │    │    └─BertLayer: 4-1                              --
+│    │    │    │    └─BertAttention: 5-1                     --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-1        --
+│    │    │    │    │    │    └─MonarchMatrix: 7-1           65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-2           65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-3           65,536
+│    │    │    │    │    │    └─Dropout: 7-4                 --
+│    │    │    │    │    └─BertSelfOutput: 6-2               --
+│    │    │    │    │    │    └─MonarchMatrix: 7-5           65,536
+│    │    │    │    │    │    └─LayerNorm: 7-6               2,048
+│    │    │    │    │    │    └─Dropout: 7-7                 --
+│    │    │    │    └─BertIntermediate: 5-2                  --
+│    │    │    │    │    └─MonarchMatrix: 6-3                524,288
+│    │    │    │    │    └─GELUActivation: 6-4               --
+│    │    │    │    └─BertOutput: 5-3                        --
+│    │    │    │    │    └─MonarchMatrix: 6-5                524,288
+│    │    │    │    │    └─LayerNorm: 6-6                    2,048
+│    │    │    │    │    └─Dropout: 6-7                      --
+│    │    │    └─BertLayer: 4-2                              --
+│    │    │    │    └─BertAttention: 5-4                     --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-8        --
+│    │    │    │    │    │    └─MonarchMatrix: 7-8           65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-9           65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-10          65,536
+│    │    │    │    │    │    └─Dropout: 7-11                --
+│    │    │    │    │    └─BertSelfOutput: 6-9               --
+│    │    │    │    │    │    └─MonarchMatrix: 7-12          65,536
+│    │    │    │    │    │    └─LayerNorm: 7-13              2,048
+│    │    │    │    │    │    └─Dropout: 7-14                --
+│    │    │    │    └─BertIntermediate: 5-5                  --
+│    │    │    │    │    └─MonarchMatrix: 6-10               524,288
+│    │    │    │    │    └─GELUActivation: 6-11              --
+│    │    │    │    └─BertOutput: 5-6                        --
+│    │    │    │    │    └─MonarchMatrix: 6-12               524,288
+│    │    │    │    │    └─LayerNorm: 6-13                   2,048
+│    │    │    │    │    └─Dropout: 6-14                     --
+│    │    │    └─BertLayer: 4-3                              --
+│    │    │    │    └─BertAttention: 5-7                     --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-15       --
+│    │    │    │    │    │    └─MonarchMatrix: 7-15          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-16          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-17          65,536
+│    │    │    │    │    │    └─Dropout: 7-18                --
+│    │    │    │    │    └─BertSelfOutput: 6-16              --
+│    │    │    │    │    │    └─MonarchMatrix: 7-19          65,536
+│    │    │    │    │    │    └─LayerNorm: 7-20              2,048
+│    │    │    │    │    │    └─Dropout: 7-21                --
+│    │    │    │    └─BertIntermediate: 5-8                  --
+│    │    │    │    │    └─MonarchMatrix: 6-17               524,288
+│    │    │    │    │    └─GELUActivation: 6-18              --
+│    │    │    │    └─BertOutput: 5-9                        --
+│    │    │    │    │    └─MonarchMatrix: 6-19               524,288
+│    │    │    │    │    └─LayerNorm: 6-20                   2,048
+│    │    │    │    │    └─Dropout: 6-21                     --
+│    │    │    └─BertLayer: 4-4                              --
+│    │    │    │    └─BertAttention: 5-10                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-22       --
+│    │    │    │    │    │    └─MonarchMatrix: 7-22          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-23          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-24          65,536
+│    │    │    │    │    │    └─Dropout: 7-25                --
+│    │    │    │    │    └─BertSelfOutput: 6-23              --
+│    │    │    │    │    │    └─MonarchMatrix: 7-26          65,536
+│    │    │    │    │    │    └─LayerNorm: 7-27              2,048
+│    │    │    │    │    │    └─Dropout: 7-28                --
+│    │    │    │    └─BertIntermediate: 5-11                 --
+│    │    │    │    │    └─MonarchMatrix: 6-24               524,288
+│    │    │    │    │    └─GELUActivation: 6-25              --
+│    │    │    │    └─BertOutput: 5-12                       --
+│    │    │    │    │    └─MonarchMatrix: 6-26               524,288
+│    │    │    │    │    └─LayerNorm: 6-27                   2,048
+│    │    │    │    │    └─Dropout: 6-28                     --
+│    │    │    └─BertLayer: 4-5                              --
+│    │    │    │    └─BertAttention: 5-13                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-29       --
+│    │    │    │    │    │    └─MonarchMatrix: 7-29          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-30          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-31          65,536
+│    │    │    │    │    │    └─Dropout: 7-32                --
+│    │    │    │    │    └─BertSelfOutput: 6-30              --
+│    │    │    │    │    │    └─MonarchMatrix: 7-33          65,536
+│    │    │    │    │    │    └─LayerNorm: 7-34              2,048
+│    │    │    │    │    │    └─Dropout: 7-35                --
+│    │    │    │    └─BertIntermediate: 5-14                 --
+│    │    │    │    │    └─MonarchMatrix: 6-31               524,288
+│    │    │    │    │    └─GELUActivation: 6-32              --
+│    │    │    │    └─BertOutput: 5-15                       --
+│    │    │    │    │    └─MonarchMatrix: 6-33               524,288
+│    │    │    │    │    └─LayerNorm: 6-34                   2,048
+│    │    │    │    │    └─Dropout: 6-35                     --
+│    │    │    └─BertLayer: 4-6                              --
+│    │    │    │    └─BertAttention: 5-16                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-36       --
+│    │    │    │    │    │    └─MonarchMatrix: 7-36          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-37          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-38          65,536
+│    │    │    │    │    │    └─Dropout: 7-39                --
+│    │    │    │    │    └─BertSelfOutput: 6-37              --
+│    │    │    │    │    │    └─MonarchMatrix: 7-40          65,536
+│    │    │    │    │    │    └─LayerNorm: 7-41              2,048
+│    │    │    │    │    │    └─Dropout: 7-42                --
+│    │    │    │    └─BertIntermediate: 5-17                 --
+│    │    │    │    │    └─MonarchMatrix: 6-38               524,288
+│    │    │    │    │    └─GELUActivation: 6-39              --
+│    │    │    │    └─BertOutput: 5-18                       --
+│    │    │    │    │    └─MonarchMatrix: 6-40               524,288
+│    │    │    │    │    └─LayerNorm: 6-41                   2,048
+│    │    │    │    │    └─Dropout: 6-42                     --
+│    │    │    └─BertLayer: 4-7                              --
+│    │    │    │    └─BertAttention: 5-19                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-43       --
+│    │    │    │    │    │    └─MonarchMatrix: 7-43          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-44          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-45          65,536
+│    │    │    │    │    │    └─Dropout: 7-46                --
+│    │    │    │    │    └─BertSelfOutput: 6-44              --
+│    │    │    │    │    │    └─MonarchMatrix: 7-47          65,536
+│    │    │    │    │    │    └─LayerNorm: 7-48              2,048
+│    │    │    │    │    │    └─Dropout: 7-49                --
+│    │    │    │    └─BertIntermediate: 5-20                 --
+│    │    │    │    │    └─MonarchMatrix: 6-45               524,288
+│    │    │    │    │    └─GELUActivation: 6-46              --
+│    │    │    │    └─BertOutput: 5-21                       --
+│    │    │    │    │    └─MonarchMatrix: 6-47               524,288
+│    │    │    │    │    └─LayerNorm: 6-48                   2,048
+│    │    │    │    │    └─Dropout: 6-49                     --
+│    │    │    └─BertLayer: 4-8                              --
+│    │    │    │    └─BertAttention: 5-22                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-50       --
+│    │    │    │    │    │    └─MonarchMatrix: 7-50          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-51          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-52          65,536
+│    │    │    │    │    │    └─Dropout: 7-53                --
+│    │    │    │    │    └─BertSelfOutput: 6-51              --
+│    │    │    │    │    │    └─MonarchMatrix: 7-54          65,536
+│    │    │    │    │    │    └─LayerNorm: 7-55              2,048
+│    │    │    │    │    │    └─Dropout: 7-56                --
+│    │    │    │    └─BertIntermediate: 5-23                 --
+│    │    │    │    │    └─MonarchMatrix: 6-52               524,288
+│    │    │    │    │    └─GELUActivation: 6-53              --
+│    │    │    │    └─BertOutput: 5-24                       --
+│    │    │    │    │    └─MonarchMatrix: 6-54               524,288
+│    │    │    │    │    └─LayerNorm: 6-55                   2,048
+│    │    │    │    │    └─Dropout: 6-56                     --
+│    │    │    └─BertLayer: 4-9                              --
+│    │    │    │    └─BertAttention: 5-25                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-57       --
+│    │    │    │    │    │    └─MonarchMatrix: 7-57          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-58          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-59          65,536
+│    │    │    │    │    │    └─Dropout: 7-60                --
+│    │    │    │    │    └─BertSelfOutput: 6-58              --
+│    │    │    │    │    │    └─MonarchMatrix: 7-61          65,536
+│    │    │    │    │    │    └─LayerNorm: 7-62              2,048
+│    │    │    │    │    │    └─Dropout: 7-63                --
+│    │    │    │    └─BertIntermediate: 5-26                 --
+│    │    │    │    │    └─MonarchMatrix: 6-59               524,288
+│    │    │    │    │    └─GELUActivation: 6-60              --
+│    │    │    │    └─BertOutput: 5-27                       --
+│    │    │    │    │    └─MonarchMatrix: 6-61               524,288
+│    │    │    │    │    └─LayerNorm: 6-62                   2,048
+│    │    │    │    │    └─Dropout: 6-63                     --
+│    │    │    └─BertLayer: 4-10                             --
+│    │    │    │    └─BertAttention: 5-28                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-64       --
+│    │    │    │    │    │    └─MonarchMatrix: 7-64          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-65          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-66          65,536
+│    │    │    │    │    │    └─Dropout: 7-67                --
+│    │    │    │    │    └─BertSelfOutput: 6-65              --
+│    │    │    │    │    │    └─MonarchMatrix: 7-68          65,536
+│    │    │    │    │    │    └─LayerNorm: 7-69              2,048
+│    │    │    │    │    │    └─Dropout: 7-70                --
+│    │    │    │    └─BertIntermediate: 5-29                 --
+│    │    │    │    │    └─MonarchMatrix: 6-66               524,288
+│    │    │    │    │    └─GELUActivation: 6-67              --
+│    │    │    │    └─BertOutput: 5-30                       --
+│    │    │    │    │    └─MonarchMatrix: 6-68               524,288
+│    │    │    │    │    └─LayerNorm: 6-69                   2,048
+│    │    │    │    │    └─Dropout: 6-70                     --
+│    │    │    └─BertLayer: 4-11                             --
+│    │    │    │    └─BertAttention: 5-31                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-71       --
+│    │    │    │    │    │    └─MonarchMatrix: 7-71          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-72          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-73          65,536
+│    │    │    │    │    │    └─Dropout: 7-74                --
+│    │    │    │    │    └─BertSelfOutput: 6-72              --
+│    │    │    │    │    │    └─MonarchMatrix: 7-75          65,536
+│    │    │    │    │    │    └─LayerNorm: 7-76              2,048
+│    │    │    │    │    │    └─Dropout: 7-77                --
+│    │    │    │    └─BertIntermediate: 5-32                 --
+│    │    │    │    │    └─MonarchMatrix: 6-73               524,288
+│    │    │    │    │    └─GELUActivation: 6-74              --
+│    │    │    │    └─BertOutput: 5-33                       --
+│    │    │    │    │    └─MonarchMatrix: 6-75               524,288
+│    │    │    │    │    └─LayerNorm: 6-76                   2,048
+│    │    │    │    │    └─Dropout: 6-77                     --
+│    │    │    └─BertLayer: 4-12                             --
+│    │    │    │    └─BertAttention: 5-34                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-78       --
+│    │    │    │    │    │    └─MonarchMatrix: 7-78          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-79          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-80          65,536
+│    │    │    │    │    │    └─Dropout: 7-81                --
+│    │    │    │    │    └─BertSelfOutput: 6-79              --
+│    │    │    │    │    │    └─MonarchMatrix: 7-82          65,536
+│    │    │    │    │    │    └─LayerNorm: 7-83              2,048
+│    │    │    │    │    │    └─Dropout: 7-84                --
+│    │    │    │    └─BertIntermediate: 5-35                 --
+│    │    │    │    │    └─MonarchMatrix: 6-80               524,288
+│    │    │    │    │    └─GELUActivation: 6-81              --
+│    │    │    │    └─BertOutput: 5-36                       --
+│    │    │    │    │    └─MonarchMatrix: 6-82               524,288
+│    │    │    │    │    └─LayerNorm: 6-83                   2,048
+│    │    │    │    │    └─Dropout: 6-84                     --
+│    │    │    └─BertLayer: 4-13                             --
+│    │    │    │    └─BertAttention: 5-37                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-85       --
+│    │    │    │    │    │    └─MonarchMatrix: 7-85          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-86          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-87          65,536
+│    │    │    │    │    │    └─Dropout: 7-88                --
+│    │    │    │    │    └─BertSelfOutput: 6-86              --
+│    │    │    │    │    │    └─MonarchMatrix: 7-89          65,536
+│    │    │    │    │    │    └─LayerNorm: 7-90              2,048
+│    │    │    │    │    │    └─Dropout: 7-91                --
+│    │    │    │    └─BertIntermediate: 5-38                 --
+│    │    │    │    │    └─MonarchMatrix: 6-87               524,288
+│    │    │    │    │    └─GELUActivation: 6-88              --
+│    │    │    │    └─BertOutput: 5-39                       --
+│    │    │    │    │    └─MonarchMatrix: 6-89               524,288
+│    │    │    │    │    └─LayerNorm: 6-90                   2,048
+│    │    │    │    │    └─Dropout: 6-91                     --
+│    │    │    └─BertLayer: 4-14                             --
+│    │    │    │    └─BertAttention: 5-40                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-92       --
+│    │    │    │    │    │    └─MonarchMatrix: 7-92          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-93          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-94          65,536
+│    │    │    │    │    │    └─Dropout: 7-95                --
+│    │    │    │    │    └─BertSelfOutput: 6-93              --
+│    │    │    │    │    │    └─MonarchMatrix: 7-96          65,536
+│    │    │    │    │    │    └─LayerNorm: 7-97              2,048
+│    │    │    │    │    │    └─Dropout: 7-98                --
+│    │    │    │    └─BertIntermediate: 5-41                 --
+│    │    │    │    │    └─MonarchMatrix: 6-94               524,288
+│    │    │    │    │    └─GELUActivation: 6-95              --
+│    │    │    │    └─BertOutput: 5-42                       --
+│    │    │    │    │    └─MonarchMatrix: 6-96               524,288
+│    │    │    │    │    └─LayerNorm: 6-97                   2,048
+│    │    │    │    │    └─Dropout: 6-98                     --
+│    │    │    └─BertLayer: 4-15                             --
+│    │    │    │    └─BertAttention: 5-43                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-99       --
+│    │    │    │    │    │    └─MonarchMatrix: 7-99          65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-100         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-101         65,536
+│    │    │    │    │    │    └─Dropout: 7-102               --
+│    │    │    │    │    └─BertSelfOutput: 6-100             --
+│    │    │    │    │    │    └─MonarchMatrix: 7-103         65,536
+│    │    │    │    │    │    └─LayerNorm: 7-104             2,048
+│    │    │    │    │    │    └─Dropout: 7-105               --
+│    │    │    │    └─BertIntermediate: 5-44                 --
+│    │    │    │    │    └─MonarchMatrix: 6-101              524,288
+│    │    │    │    │    └─GELUActivation: 6-102             --
+│    │    │    │    └─BertOutput: 5-45                       --
+│    │    │    │    │    └─MonarchMatrix: 6-103              524,288
+│    │    │    │    │    └─LayerNorm: 6-104                  2,048
+│    │    │    │    │    └─Dropout: 6-105                    --
+│    │    │    └─BertLayer: 4-16                             --
+│    │    │    │    └─BertAttention: 5-46                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-106      --
+│    │    │    │    │    │    └─MonarchMatrix: 7-106         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-107         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-108         65,536
+│    │    │    │    │    │    └─Dropout: 7-109               --
+│    │    │    │    │    └─BertSelfOutput: 6-107             --
+│    │    │    │    │    │    └─MonarchMatrix: 7-110         65,536
+│    │    │    │    │    │    └─LayerNorm: 7-111             2,048
+│    │    │    │    │    │    └─Dropout: 7-112               --
+│    │    │    │    └─BertIntermediate: 5-47                 --
+│    │    │    │    │    └─MonarchMatrix: 6-108              524,288
+│    │    │    │    │    └─GELUActivation: 6-109             --
+│    │    │    │    └─BertOutput: 5-48                       --
+│    │    │    │    │    └─MonarchMatrix: 6-110              524,288
+│    │    │    │    │    └─LayerNorm: 6-111                  2,048
+│    │    │    │    │    └─Dropout: 6-112                    --
+│    │    │    └─BertLayer: 4-17                             --
+│    │    │    │    └─BertAttention: 5-49                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-113      --
+│    │    │    │    │    │    └─MonarchMatrix: 7-113         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-114         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-115         65,536
+│    │    │    │    │    │    └─Dropout: 7-116               --
+│    │    │    │    │    └─BertSelfOutput: 6-114             --
+│    │    │    │    │    │    └─MonarchMatrix: 7-117         65,536
+│    │    │    │    │    │    └─LayerNorm: 7-118             2,048
+│    │    │    │    │    │    └─Dropout: 7-119               --
+│    │    │    │    └─BertIntermediate: 5-50                 --
+│    │    │    │    │    └─MonarchMatrix: 6-115              524,288
+│    │    │    │    │    └─GELUActivation: 6-116             --
+│    │    │    │    └─BertOutput: 5-51                       --
+│    │    │    │    │    └─MonarchMatrix: 6-117              524,288
+│    │    │    │    │    └─LayerNorm: 6-118                  2,048
+│    │    │    │    │    └─Dropout: 6-119                    --
+│    │    │    └─BertLayer: 4-18                             --
+│    │    │    │    └─BertAttention: 5-52                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-120      --
+│    │    │    │    │    │    └─MonarchMatrix: 7-120         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-121         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-122         65,536
+│    │    │    │    │    │    └─Dropout: 7-123               --
+│    │    │    │    │    └─BertSelfOutput: 6-121             --
+│    │    │    │    │    │    └─MonarchMatrix: 7-124         65,536
+│    │    │    │    │    │    └─LayerNorm: 7-125             2,048
+│    │    │    │    │    │    └─Dropout: 7-126               --
+│    │    │    │    └─BertIntermediate: 5-53                 --
+│    │    │    │    │    └─MonarchMatrix: 6-122              524,288
+│    │    │    │    │    └─GELUActivation: 6-123             --
+│    │    │    │    └─BertOutput: 5-54                       --
+│    │    │    │    │    └─MonarchMatrix: 6-124              524,288
+│    │    │    │    │    └─LayerNorm: 6-125                  2,048
+│    │    │    │    │    └─Dropout: 6-126                    --
+│    │    │    └─BertLayer: 4-19                             --
+│    │    │    │    └─BertAttention: 5-55                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-127      --
+│    │    │    │    │    │    └─MonarchMatrix: 7-127         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-128         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-129         65,536
+│    │    │    │    │    │    └─Dropout: 7-130               --
+│    │    │    │    │    └─BertSelfOutput: 6-128             --
+│    │    │    │    │    │    └─MonarchMatrix: 7-131         65,536
+│    │    │    │    │    │    └─LayerNorm: 7-132             2,048
+│    │    │    │    │    │    └─Dropout: 7-133               --
+│    │    │    │    └─BertIntermediate: 5-56                 --
+│    │    │    │    │    └─MonarchMatrix: 6-129              524,288
+│    │    │    │    │    └─GELUActivation: 6-130             --
+│    │    │    │    └─BertOutput: 5-57                       --
+│    │    │    │    │    └─MonarchMatrix: 6-131              524,288
+│    │    │    │    │    └─LayerNorm: 6-132                  2,048
+│    │    │    │    │    └─Dropout: 6-133                    --
+│    │    │    └─BertLayer: 4-20                             --
+│    │    │    │    └─BertAttention: 5-58                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-134      --
+│    │    │    │    │    │    └─MonarchMatrix: 7-134         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-135         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-136         65,536
+│    │    │    │    │    │    └─Dropout: 7-137               --
+│    │    │    │    │    └─BertSelfOutput: 6-135             --
+│    │    │    │    │    │    └─MonarchMatrix: 7-138         65,536
+│    │    │    │    │    │    └─LayerNorm: 7-139             2,048
+│    │    │    │    │    │    └─Dropout: 7-140               --
+│    │    │    │    └─BertIntermediate: 5-59                 --
+│    │    │    │    │    └─MonarchMatrix: 6-136              524,288
+│    │    │    │    │    └─GELUActivation: 6-137             --
+│    │    │    │    └─BertOutput: 5-60                       --
+│    │    │    │    │    └─MonarchMatrix: 6-138              524,288
+│    │    │    │    │    └─LayerNorm: 6-139                  2,048
+│    │    │    │    │    └─Dropout: 6-140                    --
+│    │    │    └─BertLayer: 4-21                             --
+│    │    │    │    └─BertAttention: 5-61                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-141      --
+│    │    │    │    │    │    └─MonarchMatrix: 7-141         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-142         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-143         65,536
+│    │    │    │    │    │    └─Dropout: 7-144               --
+│    │    │    │    │    └─BertSelfOutput: 6-142             --
+│    │    │    │    │    │    └─MonarchMatrix: 7-145         65,536
+│    │    │    │    │    │    └─LayerNorm: 7-146             2,048
+│    │    │    │    │    │    └─Dropout: 7-147               --
+│    │    │    │    └─BertIntermediate: 5-62                 --
+│    │    │    │    │    └─MonarchMatrix: 6-143              524,288
+│    │    │    │    │    └─GELUActivation: 6-144             --
+│    │    │    │    └─BertOutput: 5-63                       --
+│    │    │    │    │    └─MonarchMatrix: 6-145              524,288
+│    │    │    │    │    └─LayerNorm: 6-146                  2,048
+│    │    │    │    │    └─Dropout: 6-147                    --
+│    │    │    └─BertLayer: 4-22                             --
+│    │    │    │    └─BertAttention: 5-64                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-148      --
+│    │    │    │    │    │    └─MonarchMatrix: 7-148         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-149         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-150         65,536
+│    │    │    │    │    │    └─Dropout: 7-151               --
+│    │    │    │    │    └─BertSelfOutput: 6-149             --
+│    │    │    │    │    │    └─MonarchMatrix: 7-152         65,536
+│    │    │    │    │    │    └─LayerNorm: 7-153             2,048
+│    │    │    │    │    │    └─Dropout: 7-154               --
+│    │    │    │    └─BertIntermediate: 5-65                 --
+│    │    │    │    │    └─MonarchMatrix: 6-150              524,288
+│    │    │    │    │    └─GELUActivation: 6-151             --
+│    │    │    │    └─BertOutput: 5-66                       --
+│    │    │    │    │    └─MonarchMatrix: 6-152              524,288
+│    │    │    │    │    └─LayerNorm: 6-153                  2,048
+│    │    │    │    │    └─Dropout: 6-154                    --
+│    │    │    └─BertLayer: 4-23                             --
+│    │    │    │    └─BertAttention: 5-67                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-155      --
+│    │    │    │    │    │    └─MonarchMatrix: 7-155         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-156         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-157         65,536
+│    │    │    │    │    │    └─Dropout: 7-158               --
+│    │    │    │    │    └─BertSelfOutput: 6-156             --
+│    │    │    │    │    │    └─MonarchMatrix: 7-159         65,536
+│    │    │    │    │    │    └─LayerNorm: 7-160             2,048
+│    │    │    │    │    │    └─Dropout: 7-161               --
+│    │    │    │    └─BertIntermediate: 5-68                 --
+│    │    │    │    │    └─MonarchMatrix: 6-157              524,288
+│    │    │    │    │    └─GELUActivation: 6-158             --
+│    │    │    │    └─BertOutput: 5-69                       --
+│    │    │    │    │    └─MonarchMatrix: 6-159              524,288
+│    │    │    │    │    └─LayerNorm: 6-160                  2,048
+│    │    │    │    │    └─Dropout: 6-161                    --
+│    │    │    └─BertLayer: 4-24                             --
+│    │    │    │    └─BertAttention: 5-70                    --
+│    │    │    │    │    └─BertSdpaSelfAttention: 6-162      --
+│    │    │    │    │    │    └─MonarchMatrix: 7-162         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-163         65,536
+│    │    │    │    │    │    └─MonarchMatrix: 7-164         65,536
+│    │    │    │    │    │    └─Dropout: 7-165               --
+│    │    │    │    │    └─BertSelfOutput: 6-163             --
+│    │    │    │    │    │    └─MonarchMatrix: 7-166         65,536
+│    │    │    │    │    │    └─LayerNorm: 7-167             2,048
+│    │    │    │    │    │    └─Dropout: 7-168               --
+│    │    │    │    └─BertIntermediate: 5-71                 --
+│    │    │    │    │    └─MonarchMatrix: 6-164              524,288
+│    │    │    │    │    └─GELUActivation: 6-165             --
+│    │    │    │    └─BertOutput: 5-72                       --
+│    │    │    │    │    └─MonarchMatrix: 6-166              524,288
+│    │    │    │    │    └─LayerNorm: 6-167                  2,048
+│    │    │    │    │    └─Dropout: 6-168                    --
+│    └─BertPooler: 2-3                                       --
+│    │    └─MonarchMatrix: 3-7                               65,536
+│    │    └─Tanh: 3-8                                        --
+├─Dropout: 1-2                                               --
+├─MonarchMatrix: 1-3                                         65,536
+=====================================================================================
+Total params: 63,469,568
+Trainable params: 63,469,568
+Non-trainable params: 0
+=====================================================================================

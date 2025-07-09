@@ -1,0 +1,66 @@
+# own
+
+results
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+*.ipynb_checkpoints/
+
+# Virtual environment
+.env/
+.venv/
+env/
+venv/
+*.env
+*.venv
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# PyTorch checkpoints and model files
+*.pt
+*.pth
+*.ckpt
+
+# Hugging Face Transformers training artifacts
+runs/                   # TensorBoard logs
+logs/
+results/
+output/
+checkpoint*/            # Model checkpoints
+**/checkpoint-*/
+
+# Transformers cache
+~/.cache/huggingface/
+~/.cache/torch/
+~/.torch/
+
+# Python environment files
+Pipfile.lock
+poetry.lock
+pip-wheel-metadata/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VSCode settings
+.vscode/
+
+# Testing & coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+*.cover
+.cache
+pytest_cache/
+
+# Temporary or backup files
+*.bak
+*.tmp
+*.swp
